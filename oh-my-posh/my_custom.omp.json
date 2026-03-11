@@ -28,7 +28,12 @@
           },
           "style": "diamond",
           "template": " {{.Icon}}{{if .WSL}} (WSL){{end}}\u2800",
-          "type": "os"
+          "type": "os",
+          "background_templates": [
+            "{{ if .WSL }}#E95420{{ end }}",
+            "{{ if eq .OS \"windows\" }}#464646{{ end }}",
+            "{{ if eq .OS \"linux\" }}#3C873A{{ end }}"
+          ]
         },
         {
           "background": "p:white",
