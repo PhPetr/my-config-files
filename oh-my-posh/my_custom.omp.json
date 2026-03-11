@@ -54,7 +54,7 @@
           },
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": "{{.HEAD}}\u2800 {{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#ef5350> \uf046 {{ .Staging.String }}</>{{ end }} ",
+          "template": " {{ .UpstreamIcon }}{{.HEAD}}\u2800 {{ if .Working.Changed }}{{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#ef5350> \uf046 {{ .Staging.String }}</>{{ end }} ",
           "type": "git",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#ffeb95{{ end }}",
@@ -91,7 +91,7 @@
             "threshold": 0
           },
           "style": "plain",
-          "template": "{{.FormattedMs}}",
+          "template": "\u2800{{.FormattedMs}}",
           "type": "executiontime"
         }
       ]
