@@ -24,12 +24,15 @@
             "windows": "\ue62a",
             "linux": "\uf17c",
             "ubuntu": "\uf31b",
-            "macos": "\uf179"
+            "macos": "\uf179",
+            "fedora": "\uf30a",
+            "fedoralinux": "\uf30a"
           },
           "style": "diamond",
           "template": " {{.Icon}}{{if .WSL}} (WSL){{end}}\u2800",
           "type": "os",
           "background_templates": [
+            "{{ if eq .Icon \"\uf30a\" }}#51a2da{{ end }}",
             "{{ if .WSL }}#E95420{{ end }}",
             "{{ if eq .OS \"windows\" }}#464646{{ end }}",
             "{{ if eq .OS \"linux\" }}#3C873A{{ end }}"
